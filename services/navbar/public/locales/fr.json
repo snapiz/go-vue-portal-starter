@@ -1,0 +1,59 @@
+{
+  "errors": {
+    "auth": {
+      "invalidCredentials": "Identifiants non valides",
+      "accountIsDisabled": "Compte désactivé",
+      "emailAlreadyExists": "L'email existe déjà",
+      "usernameAlreadyExists": "Le nom d'utilisateur existe déjà"
+    },
+
+    "field": {
+      "required": "Ce champ est obligatoire",
+      "email": "Ce champ doit être un email",
+      "between": "Ce champ doit avoir une longueur comprise entre {{min}} et {{max}} caractères",
+      "alphaNumeric": "Ce champ doit être alphanumérique",
+      "url": "Ce champ doit être une URL valide"
+    },
+
+    "user": {
+      "usernameAlreadyDefined": "Nom d'utilisateur déjà défini",
+      "badPassword": "Mot de passe incorrect",
+      "fetch": "Impossible de trouver l'utilisateur"
+    }
+  },
+  "mainNav": {
+    "goToConsole": "Accéder à la console"
+  },
+  "meNav": {
+    "profile": "Profil",
+    "account": "Compte"
+  },
+  "serviceNav": {
+    "title": "Services",
+    "menu": "Menu",
+    "marketing": {
+      "title": "Marketing",
+      "campaign": "Campagne"
+    },
+    "storage": {
+      "title": "Stockage",
+      "contact": "Contact"
+    }
+  },
+  "userMenu": {
+    "account": "Mon compte",
+    "help": "Aide",
+    "admin": "Admin",
+    "logout": "Déconnexion"
+  },
+  "signinMenu": {
+    "title": "Connexion",
+    "signin": "Email / Nom d'utilisateur",
+    "signinWith": "Connectez-vous avec compte {{name}}",
+    "password": "Mot de passe",
+    "divider": "OU",
+    "new": "Nouveau sur Go-vue-portal-starter ?",
+    "forgotPassword": "Mot de passe oublié ?",
+    "signup": "Créer un compte"
+  }
+}

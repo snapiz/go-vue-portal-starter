@@ -1,0 +1,22 @@
+{
+  "errors": {
+    "http": {
+      "403": "403 Accès refusé",
+      "404": "404 Ressource non trouvée",
+      "500": "500 Erreur interne du serveur"
+    },
+    "pages": {
+      "notFoundHeader": "Cette page est inconnue ou n'existe pas",
+      "notFoundDesc": "Désolé, mais la page que vous cherchez est disponible.",
+      "forbiddenHeader": "Accès refusé",
+      "forbiddenDesc": "Vous n'êtes pas autorisé à entrer ici",
+      "errorHeader": "C'est toujours l'heure d'une pause café.",
+      "errorDesc": "On devrait être de retour quand tu auras fini ton café."
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Page d'accueil"
+    }
+  }
+}

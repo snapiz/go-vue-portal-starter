@@ -1,0 +1,42 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Go-vue-portal-starter auth
+
+Globals:
+  Function:
+    Timeout: 5
+
+Resources:
+  ApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: bin
+      Handler: auth
+      Runtime: go1.x
+      Tracing: Active
+      Events:
+        AuthLogout:
+          Type: Api
+          Properties:
+            Path: /auth/logout
+            Method: POST
+        AuthLocal:
+          Type: Api
+          Properties:
+            Path: /auth/local
+            Method: POST
+        AuthLocalNew:
+          Type: Api
+          Properties:
+            Path: /auth/local/new
+            Method: POST
+        AuthOauth2:
+          Type: Api
+          Properties:
+            Path: /auth/{provider}
+            Method: GET
+        AuthOauth2Callback:
+          Type: Api
+          Properties:
+            Path: /auth/{provider}/callback
+            Method: GET

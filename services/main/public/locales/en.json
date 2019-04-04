@@ -1,0 +1,64 @@
+{
+  "errors": {
+    "http": {
+      "403": "403 Forbidden",
+      "404": "404 Not Found",
+      "500": "500 Internal Server Error"
+    },
+    "pages": {
+      "notFoundHeader": "This page is unknown or does not exist",
+      "notFoundDesc": "Sorry about that, but the page you looking for is avalible",
+      "forbiddenHeader": "Access denied",
+      "forbiddenDesc": "You are not allowed to enter here",
+      "errorHeader": "It's always time for a coffee break",
+      "errorDesc": "We should be back by the time you finish your coffee"
+    },
+    "auth": {
+      "invalidCredentials": "Invalid credentials",
+      "accountIsDisabled": "Account disabled",
+      "emailAlreadyExists": "Email already exists",
+      "usernameAlreadyExists": "Username already exists"
+    },
+
+    "field": {
+      "required": "This field is required",
+      "email": "This field must be an email",
+      "between": "This field must be between {{min}} and {{max}} characters long",
+      "alphaNumeric": "This field must be alpha numeric",
+      "url": "This field must be valid URL",
+      "confirmPassword": "The password doesn't match"
+    },
+
+    "user": {
+      "usernameAlreadyDefined": "Username already defined",
+      "badPassword": "Bad password",
+      "fetch": "Failed to fetch user"
+    }
+  },
+
+  "pages": {
+    "home": {
+      "title": "Go-vue-portal-starter, take your data to the next level"
+    },
+
+    "signin": {
+      "title": "Sign In",
+      "signin": "Email / Username",
+      "signinWith": "Sign in with your {{name}} account",
+      "password": "Password",
+      "divider": "OR",
+      "new": "New to Go-vue-portal-starter ?",
+      "forgotPassword": "Forgot password ?"
+    },
+
+    "signup": {
+      "title": "Singn Up",
+      "email": "Email",
+      "username": "Username",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "redirectLogin": "Already have an account ?",
+      "redirectAction": "Sign In"
+    }
+  }
+}

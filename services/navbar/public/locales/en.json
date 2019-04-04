@@ -1,0 +1,59 @@
+{
+  "errors": {
+    "auth": {
+      "invalidCredentials": "Invalid credentials",
+      "accountIsDisabled": "Account disabled",
+      "emailAlreadyExists": "Email already exists",
+      "usernameAlreadyExists": "Username already exists"
+    },
+
+    "field": {
+      "required": "This field is required",
+      "email": "This field must be an email",
+      "between": "This field must be between {{min}} and {{max}} characters long",
+      "alphaNumeric": "This field must be alpha numeric",
+      "url": "This field must be valid URL"
+    },
+
+    "user": {
+      "usernameAlreadyDefined": "Username already defined",
+      "badPassword": "Bad password",
+      "fetch": "Failed to fetch user"
+    }
+  },
+  "mainNav": {
+    "goToConsole": "Go to console"
+  },
+  "meNav": {
+    "profile": "Profile",
+    "account": "Account"
+  },
+  "serviceNav": {
+    "title": "Services",
+    "menu": "Menu",
+    "marketing": {
+      "title": "Marketing",
+      "campaign": "Campaign"
+    },
+    "storage": {
+      "title": "Storage",
+      "contact": "Contact"
+    }
+  },
+  "userMenu": {
+    "account": "My account",
+    "help": "Help",
+    "admin": "Admin",
+    "logout": "Logout"
+  },
+  "signinMenu": {
+    "title": "Sign In",
+    "signin": "Email / Username",
+    "signinWith": "Sign in with your {{name}} account",
+    "password": "Password",
+    "divider": "OR",
+    "new": "New to Go-vue-portal-starter ?",
+    "forgotPassword": "Forgot password ?",
+    "signup": "Singn Up"
+  }
+}

@@ -1,0 +1,178 @@
+kind: pipeline
+name: main-service
+
+platform:
+  os: linux
+  arch: amd64
+
+workspace:
+  base: /go
+  path: src/github.com/snapiz/go-vue-portal-starter
+
+steps:
+  - name: api
+    image: golang
+    commands:
+      - cd services/main
+      - go run api/cmd/* setup
+      - go test ./...
+    environment:
+      GO111MODULE: on
+      GO_ENV: test
+      DATABASE_SOURCE: "host=db user=postgres password=postgres dbname=app_test sslmode=disable"
+
+services:
+  - name: db
+    image: postgres:11-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+trigger:
+  repo:
+  - snapiz/go-vue-portal-starter
+  event:
+  - push
+
+---
+kind: pipeline
+name: admin-service
+
+platform:
+  os: linux
+  arch: amd64
+
+workspace:
+  base: /go
+  path: src/github.com/snapiz/go-vue-portal-starter
+
+steps:
+  - name: api
+    image: golang
+    commands:
+      - cd services/admin
+      - go run api/cmd/* setup
+      - go test ./...
+    environment:
+      GO111MODULE: on
+      GO_ENV: test
+      DATABASE_SOURCE: "host=db user=postgres password=postgres dbname=app_test sslmode=disable"
+
+services:
+  - name: db
+    image: postgres:11-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+trigger:
+  repo:
+  - snapiz/go-vue-portal-starter
+  event:
+  - push
+
+---
+kind: pipeline
+name: me-service
+
+platform:
+  os: linux
+  arch: amd64
+
+workspace:
+  base: /go
+  path: src/github.com/snapiz/go-vue-portal-starter
+
+steps:
+  - name: api
+    image: golang
+    commands:
+      - cd services/me
+      - go run api/cmd/* setup
+      - go test ./...
+    environment:
+      GO111MODULE: on
+      GO_ENV: test
+      DATABASE_SOURCE: "host=db user=postgres password=postgres dbname=app_test sslmode=disable"
+
+services:
+  - name: db
+    image: postgres:11-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+trigger:
+  repo:
+  - snapiz/go-vue-portal-starter
+  event:
+  - push
+
+---
+kind: pipeline
+name: contact-service
+
+platform:
+  os: linux
+  arch: amd64
+
+workspace:
+  base: /go
+  path: src/github.com/snapiz/go-vue-portal-starter
+
+steps:
+  - name: api
+    image: golang
+    commands:
+      - cd services/contact
+      - go run api/cmd/* setup
+      - go test ./...
+    environment:
+      GO111MODULE: on
+      GO_ENV: test
+      DATABASE_SOURCE: "host=db user=postgres password=postgres dbname=app_test sslmode=disable"
+
+services:
+  - name: db
+    image: postgres:11-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+trigger:
+  repo:
+  - snapiz/go-vue-portal-starter
+  event:
+  - push
+
+---
+kind: pipeline
+name: campaign-service
+
+platform:
+  os: linux
+  arch: amd64
+
+workspace:
+  base: /go
+  path: src/github.com/snapiz/go-vue-portal-starter
+
+steps:
+  - name: api
+    image: golang
+    commands:
+      - cd services/campaign
+      - go run api/cmd/* setup
+      - go test ./...
+    environment:
+      GO111MODULE: on
+      GO_ENV: test
+      DATABASE_SOURCE: "host=db user=postgres password=postgres dbname=app_test sslmode=disable"
+
+services:
+  - name: db
+    image: postgres:11-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+trigger:
+  repo:
+  - snapiz/go-vue-portal-starter
+  event:
+  - push

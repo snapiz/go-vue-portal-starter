@@ -1,0 +1,22 @@
+{
+  "errors": {
+    "http": {
+      "403": "403 Forbidden",
+      "404": "404 Not Found",
+      "500": "500 Internal Server Error"
+    },
+    "pages": {
+      "notFoundHeader": "This page is unknown or does not exist",
+      "notFoundDesc": "Sorry about that, but the page you looking for is avalible",
+      "forbiddenHeader": "Access denied",
+      "forbiddenDesc": "You are not allowed to enter here",
+      "errorHeader": "It's always time for a coffee break",
+      "errorDesc": "We should be back by the time you finish your coffee"
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Home"
+    }
+  }
+}

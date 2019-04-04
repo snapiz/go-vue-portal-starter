@@ -1,0 +1,72 @@
+{
+  "name": "@go-vue-portal-starter/contact",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "yarn serve:api & yarn serve",
+    "serve:api": "PORT=3005 GO_ENV=dev go run $(ls -1 **/*.go | grep -v _test.go)",
+    "serve": "vue-cli-service serve --port 9005",
+    "build:api": "rm -rf ./bin && GOOS=linux GOARCH=amd64 go build -ldflags=\"-s -w\" -o bin/app ./api",
+    "build": "yarn build:api & vue-cli-service build -p --progress",
+    "cmd": "GO_ENV=dev go run api/cmd/*",
+    "cmd:test": "GO_ENV=test go run api/cmd/*",
+    "cmd:prod": "GO_ENV=prod go run api/cmd/*",
+    "models": "rm -rf ./api/db/models && yarn cmd models",
+    "local:add": "yarn add file:../../common/vue",
+    "lint": "vue-cli-service lint",
+    "test:e2e": "vue-cli-service test:e2e",
+    "test:unit": "vue-cli-service test:unit",
+    "test:api": "GO_ENV=test go test ./...",
+    "sam:s3": "aws s3 mb s3://go-vue-portal-starter-contact-sam --region eu-west-3",
+    "sam:package": "sam package --template-file template.yml --output-template-file packaged.yml --s3-bucket go-vue-portal-starter-contact-sam --region eu-west-3",
+    "sam:deploy": "sam deploy --template-file packaged.yml --stack-name go-vue-portal-starter-contact --capabilities CAPABILITY_IAM --region eu-west-3",
+    "deploy:frontend": "../../scripts/s3-sync.sh go-vue-portal-starter-contact eu-west-3",
+    "deploy": "yarn install && yarn build && yarn sam:package && yarn sam:deploy"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/vue-fontawesome": "^0.1.6",
+    "@go-vue-portal-starter/vue": "file:../../common/vue",
+    "@panter/vue-i18next": "^0.15.0",
+    "bootstrap-vue": "^2.0.0-rc.15",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.10.0",
+    "i18next": "^14.0.1",
+    "i18next-browser-languagedetector": "^2.2.4",
+    "i18next-fetch-backend": "^2.0.0",
+    "idx": "^2.5.2",
+    "lodash": "^4.17.11",
+    "single-spa-vue": "^0.1.1",
+    "vue": "^2.5.17",
+    "vuelidate": "^0.7.4"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.2.0",
+    "@vue/cli-plugin-eslint": "^3.2.0",
+    "@vue/cli-plugin-unit-jest": "^3.2.0",
+    "@vue/cli-service": "^3.2.0",
+    "@vue/eslint-config-prettier": "^4.0.0",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "lint-staged": "^7.2.2",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}

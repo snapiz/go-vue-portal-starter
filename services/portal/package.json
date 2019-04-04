@@ -1,0 +1,32 @@
+{
+  "name": "@go-vue-portal-starter/portal",
+  "private": true,
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "start": "webpack-dev-server --port 9000",
+    "build": "webpack -p --progress",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sam:s3": "aws s3 mb s3://go-vue-portal-starter-portal-sam --region eu-west-3",
+    "sam:package": "sam package --template-file template.yml --output-template-file packaged.yml --s3-bucket go-vue-portal-starter-portal-sam --region eu-west-3",
+    "sam:deploy": "sam deploy --template-file packaged.yml --stack-name go-vue-portal-starter-portal --capabilities CAPABILITY_IAM --region eu-west-3",
+    "deploy:frontend": "../../scripts/s3-sync.sh go-vue-portal-starter-portal eu-west-3",
+    "deploy": "yarn install && yarn build && yarn sam:package && yarn sam:deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "single-spa": "^4.0.1",
+    "systemjs": "^3.0.0",
+    "whatwg-fetch": "^3.0.0"
+  }
+}

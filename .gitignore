@@ -1,0 +1,40 @@
+.DS_Store
+node_modules
+dist
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+#aws
+packaged.yml
+
+# golang output binary directory
+bin
+
+# golang vendor (dependencies) directory
+vendor
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+lerna-debug.log

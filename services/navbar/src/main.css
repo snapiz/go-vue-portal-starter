@@ -1,0 +1,54 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  background-color: #ecf2f6;
+  font-family: "Open Sans", sans-serif;
+}
+
+.navbar {
+  background-color: white !important;
+}
+
+.navbar-collapse {
+  background-color: white;
+  padding: 10px;
+}
+
+.btn-primary {
+  background-color: #269af1;
+  border-color: #269af1;
+}
+
+.text-primary {
+  color: #269af1 !important;
+}
+
+a {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#service-navbar.navbar-light .navbar-brand {
+  font-weight: bold;
+  font-family: Open sans sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #455161;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    height: 50px;
+  }
+  #service-navbar.navbar-light .navbar-brand {
+    width: 200px;
+    margin: 0;
+  }
+
+  .navbar-collapse {
+    padding: 0;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

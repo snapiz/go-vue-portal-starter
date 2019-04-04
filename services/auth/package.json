@@ -1,0 +1,22 @@
+{
+  "name": "@go-vue-portal-starter/auth",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "start": "PORT=3000 GO_ENV=dev go run *.go",
+    "build": "rm -rf ./bin && GOOS=linux GOARCH=amd64 go build -ldflags=\"-s -w\" -o bin/auth .",
+    "cmd": "GO_ENV=dev go run cmd/*",
+    "cmd:test": "GO_ENV=test go run cmd/*",
+    "cmd:prod": "GO_ENV=prod go run cmd/*",
+    "models": "rm -rf ./db/models && yarn cmd models",
+    "test:api": "GO_ENV=test go test ./...",
+    "sam:s3": "aws s3 mb s3://go-vue-portal-starter-auth-sam --region eu-west-3",
+    "sam:package": "sam package --template-file template.yml --output-template-file packaged.yml --s3-bucket go-vue-portal-starter-auth-sam --region eu-west-3",
+    "sam:deploy": "sam deploy --template-file packaged.yml --stack-name go-vue-portal-starter-auth --capabilities CAPABILITY_IAM --region eu-west-3",
+    "deploy": "yarn install && yarn build && yarn sam:package && yarn sam:deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

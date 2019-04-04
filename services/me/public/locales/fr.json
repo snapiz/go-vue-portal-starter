@@ -1,0 +1,65 @@
+{
+  "errors": {
+    "http": {
+      "403": "403 Accès refusé",
+      "404": "404 Ressource non trouvée",
+      "500": "500 Erreur interne du serveur"
+    },
+    "pages": {
+      "notFoundHeader": "Cette page est inconnue ou n'existe pas",
+      "notFoundDesc": "Désolé, mais la page que vous cherchez est disponible.",
+      "forbiddenHeader": "Accès refusé",
+      "forbiddenDesc": "Vous n'êtes pas autorisé à entrer ici",
+      "errorHeader": "C'est toujours l'heure d'une pause café.",
+      "errorDesc": "On devrait être de retour quand tu auras fini ton café."
+    },
+    "field": {
+      "required": "Ce champ est obligatoire",
+      "email": "Ce champ doit être un email",
+      "between": "Ce champ doit avoir une longueur comprise entre {{min}} et {{max}} caractères",
+      "alphaNumeric": "Ce champ doit être alphanumérique",
+      "url": "Ce champ doit être une URL valide",
+      "confirmPassword": "Le mot de passe ne correspond pas"
+    },
+    "auth": {
+      "invalidCredentials": "Identifiants non valides",
+      "accountIsDisabled": "Compte désactivé",
+      "emailAlreadyExists": "L'email existe déjà",
+      "usernameAlreadyExists": "Le nom d'utilisateur existe déjà"
+    },
+    "user": {
+      "usernameAlreadyDefined": "Nom d'utilisateur déjà défini",
+      "badPassword": "Mot de passe incorrect",
+      "fetch": "Impossible de trouver l'utilisateur"
+    }
+  },
+  "pages": {
+    "home": {},
+    "profile": {
+      "public": "Profil public",
+      "update": "Mise à jour",
+      "avatar": "Avatar",
+      "displayName": "Nom d'affichage"
+    },
+    "account": {
+      "username": "Nom d'utilisateur",
+      "setUsername": "Définir nom d'utiisateur",
+      "set": "Définir",
+      "oldPassword": "Ancien mot de passe",
+      "newPassword": "Nouveau mot de passe",
+      "confirmPassword": "Confirmation mot de passe",
+      "updatePassword": "Mise à jour",
+      "changePassword": "Changer mot de passe",
+      "setPassword": "Définir mot de passe"
+    }
+  },
+  "components": {
+    "layout": {
+      "menu": {
+        "title": "Paramètres",
+        "profile": "Profil",
+        "account": "Mon compte"
+      }
+    }
+  }
+}

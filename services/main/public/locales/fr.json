@@ -1,0 +1,64 @@
+{
+  "errors": {
+    "http": {
+      "403": "403 Accès refusé",
+      "404": "404 Ressource non trouvée",
+      "500": "500 Erreur interne du serveur"
+    },
+    "pages": {
+      "notFoundHeader": "Cette page est inconnue ou n'existe pas",
+      "notFoundDesc": "Désolé, mais la page que vous cherchez est disponible.",
+      "forbiddenHeader": "Accès refusé",
+      "forbiddenDesc": "Vous n'êtes pas autorisé à entrer ici",
+      "errorHeader": "C'est toujours l'heure d'une pause café.",
+      "errorDesc": "On devrait être de retour quand tu auras fini ton café."
+    },
+    "auth": {
+      "invalidCredentials": "Identifiants non valides",
+      "accountIsDisabled": "Compte désactivé",
+      "emailAlreadyExists": "L'email existe déjà",
+      "usernameAlreadyExists": "Le nom d'utilisateur existe déjà"
+    },
+
+    "field": {
+      "required": "Ce champ est obligatoire",
+      "email": "Ce champ doit être un email",
+      "between": "Ce champ doit avoir une longueur comprise entre {{min}} et {{max}} caractères",
+      "alphaNumeric": "Ce champ doit être alphanumérique",
+      "url": "Ce champ doit être une URL valide",
+      "confirmPassword": "Le mot de passe ne correspond pas"
+    },
+
+    "user": {
+      "usernameAlreadyDefined": "Nom d'utilisateur déjà défini",
+      "badPassword": "Mot de passe incorrect",
+      "fetch": "Impossible de trouver l'utilisateur"
+    }
+  },
+
+  "pages": {
+    "home": {
+      "title": "Go-vue-portal-starter, portez vos données à un niveau supérieur"
+    },
+
+    "signin": {
+      "title": "Connexion",
+      "signin": "Email / Nom d'utilisateur",
+      "signinWith": "Connectez-vous avec compte {{name}}",
+      "password": "Mot de passe",
+      "divider": "OU",
+      "new": "Nouveau sur Go-vue-portal-starter ?",
+      "forgotPassword": "Mot de passe oublié ?"
+    },
+
+    "signup": {
+      "title": "Créer un compte",
+      "email": "Email",
+      "username": "Nom d'utilisateur",
+      "password": "Mot de passe",
+      "confirmPassword": "Confirmation mot de passe",
+      "redirectLogin": "Déjà un compte ?",
+      "redirectAction": "Me connecter"
+    }
+  }
+}
